@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap");
+
+
+/*-------------------------- 
+          variables 
+----------------------------*/
+
+
+:root{
+    --intro-bg: hsl(217, 28%, 15%);
+    --main-bg: hsl(218, 28%, 13%);
+    --footer-bg: hsl(216, 53%, 9%);
+    --testimonial-bg: hsl(219, 30%, 18%);
+
+    /* ACCENT */
+
+    --teal: hsl(176, 68%, 64%);
+    --cyan: hsl(198, 60%, 50%);
+    --red: hsl(0, 100%, 63%);
+
+    /* NEUTRAL */
+    --white: hsl(0, 0%, 100%);
+    --text-soft: hsl(0, 0%, 85%);
+
+    /* TYPOGRAPHY */
+    --font-body: "Raleway", sans-serif;
+    --font-heading: "Open Sans", sans-serif;
+    --size: 14px;
+
+    --container-width: 1200px;
+} 
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    min-height: 100vh;
+    background-color: var(--main-bg);
+    color: var(--white);
+    font-family: var(--font-body);
+    font-size: var(--size);
+    line-height: 1.6;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+button, input{
+    border: none;
+    cursor: pointer;
+}
+
+    /* UTILITES */
+
+.container{
+    width: min(90%, --container-width);
+    margin-inline: auto;
+}
+
+.visually-hidden{
+    position: absolute;
+    width: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    white-space: nowrap;
+    border: none;
+    clip: rect(0,0,0,0);
+}
+
+
+.btn{
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    min-width: 240px;
+    min-height: 48px;
+    padding: 14px 28px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--teal), var(--cyan));
+    color: var(--white);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    text-align: center;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.btn:hover, .btn:focus-visible{
+    filter: brightness(1.15);
+    transform: translateY(-2px);
+}
+
+.btn:focus-visible, 
+a:focus-visible, 
+input:focus-visible{
+    outline: 3px solid var(--teal);
+    outline-offset: 3px;
+}
+
+
+/*--------------- 
+    HEADER
+ ----------------*/
+
+ .header{
+    background: var(--intro-bg);
+    padding: 42px 0;
+ }
+
+ .header-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+ }
+
+ .logo{
+    width: 150px;
+ }
+
+ .nav-links{
+    display: flex;
+    align-items: center;
+    gap: 48px;
+ }
+
+ .nav-links a{
+    color: var(--text-soft);
+    font-family: var(--font-heading);
+    transition: color 0.3s ease;
+ }
+
+ .nav-links a:hover,
+ .nav-links a:focus-visible
+ {
+    color: var(--white);
+    text-decoration: underline;
+ }
+
+
+/*--------------- 
+    HERO
+ ----------------*/
+
+
+ .hero{
+    position: relative;
+    overflow: hidden;
+    background: var(--intro-bg);
+    padding: 30px 0 180px;
+    text-align: center;
+}
+
+.hero::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 420px;
+    background-image: url(/assets/images/bg-curvy-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: 100% 100%;
+    pointer-events: none;
+}
+
+.hero-container{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-img{
+    width: min(100%, 720px);
+    margin-bottom: 42px;
+}
+
+.hero h1{
+    max-width: 760px;
+    margin-bottom: 24px;
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vh, 2.7rem);
+    line-height: 1.3;
+}
+
+.hero p{
+    max-width: 590px;
+    margin-bottom: 30px;
+    color: var(--text-soft);
+    font-size: 1.05rem;
+}
