@@ -253,3 +253,57 @@ input:focus-visible{
     PRODUCTIVE
  ----------------*/
 
+.productive{
+    padding: 20px 0 130px;
+}
+
+.productive-container{
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 70px;
+}
+.productive-image img{
+    width: 100%;
+}
+
+.productive-content h2{
+    max-width: 420px;
+    margin-bottom: 24px;
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 2.6rem);
+    line-height: 1.2;
+}
+
+.productive-content p{
+    margin-bottom: 18px;
+    color: var(--text-soft);
+}
+
+.productive-link{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid currentColor;
+    color: var(--teal);
+    transition: 
+    color 0.3s ease,
+    gap 0.3s ease;
+}
+
+.productive-link:hover,
+.productive-link:focus-visible{
+    gap: 12px;
+    color: var(--white);
+}
+
+.productive-link img{
+    width: 19px;
+}
+
+
+
+
+
+
