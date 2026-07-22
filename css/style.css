@@ -211,3 +211,45 @@ input:focus-visible{
     color: var(--text-soft);
     font-size: 1.05rem;
 }
+
+/*--------------- 
+    FEATURES
+ ----------------*/
+
+
+.features{
+    padding: 20px 0 120px;
+}
+
+.features-container{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 90px 120px;
+    max-width: 900px;
+}
+
+.feature-card{
+    text-align: center;
+}
+
+.feature-card img{
+    height: 80px;
+    margin: 0 auto 28px;
+    object-fit: contain;
+}
+
+.feature-card h2{
+    margin-bottom: 12px;
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+}
+
+.feature-card p{
+    color: var(--text-soft);
+}
+
+
+/*--------------- 
+    PRODUCTIVE
+ ----------------*/
+
